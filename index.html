@@ -1,0 +1,892 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xtrayde Global — Nigerian Agricultural Exports</title>
+  <meta name="description" content="Xtrayde Global connects global buyers to premium Nigerian agricultural commodities — cashews, sesame, soybeans, and hibiscus — with graded quality and reliable logistics." />
+
+  <!-- ═══════════════════════════════════════════════
+       FAVICON — SVG icon matching the XTRAYDE brand
+       ═══════════════════════════════════════════════ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231a3a28'/%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23c8933a' stroke-width='2'/%3E%3C!-- sun --%3E%3Ccircle cx='32' cy='26' r='7' fill='%23c8933a'/%3E%3C!-- sun rays --%3E%3Cline x1='32' y1='14' x2='32' y2='11' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='32' y1='41' x2='32' y2='44' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='20' y1='26' x2='17' y2='26' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='44' y1='26' x2='47' y2='26' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='23.5' y1='17.5' x2='21.4' y2='15.4' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='40.5' y1='34.5' x2='42.6' y2='36.6' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='40.5' y1='17.5' x2='42.6' y2='15.4' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='23.5' y1='34.5' x2='21.4' y2='36.6' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3C!-- fields --%3E%3Cpath d='M10 44 Q22 36 32 40 Q42 36 54 44 L54 52 Q42 46 32 50 Q22 46 10 52 Z' fill='%23c8933a' opacity='0.85'/%3E%3C!-- wheat stalk --%3E%3Cline x1='48' y1='44' x2='48' y2='30' stroke='%23c8933a' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='48' cy='28' r='3' fill='%23c8933a'/%3E%3Ccircle cx='45' cy='32' r='2.5' fill='%23c8933a'/%3E%3Ccircle cx='51' cy='32' r='2.5' fill='%23c8933a'/%3E%3C/svg%3E" />
+
+  <!-- Apple touch icon -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%231a3a28'/%3E%3Ccircle cx='90' cy='90' r='75' fill='none' stroke='%23c8933a' stroke-width='5'/%3E%3Ccircle cx='90' cy='72' r='20' fill='%23c8933a'/%3E%3Cline x1='90' y1='38' x2='90' y2='30' stroke='%23c8933a' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='90' y1='114' x2='90' y2='122' stroke='%23c8933a' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='56' y1='72' x2='48' y2='72' stroke='%23c8933a' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='124' y1='72' x2='132' y2='72' stroke='%23c8933a' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M28 122 Q59 102 90 112 Q121 102 152 122 L152 145 Q121 130 90 140 Q59 130 28 145 Z' fill='%23c8933a' opacity='0.85'/%3E%3Cline x1='136' y1='122' x2='136' y2='84' stroke='%23c8933a' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='136' cy='80' r='8' fill='%23c8933a'/%3E%3Ccircle cx='127' cy='92' r='7' fill='%23c8933a'/%3E%3Ccircle cx='145' cy='92' r='7' fill='%23c8933a'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep: #1a3a28;
+      --green-mid: #2d6a45;
+      --green-light: #4d9966;
+      --gold: #c8933a;
+      --gold-light: #e8b96a;
+      --cream: #f7f3ec;
+      --cream-dark: #ede6d8;
+      --text-dark: #1a1a16;
+      --text-mid: #3d3d30;
+      --text-muted: #7a7a65;
+      --white: #ffffff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+
+    /* ═══════════ NAV ═══════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 60px; height: var(--nav-h);
+      background: rgba(26, 58, 40, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200, 147, 58, 0.2);
+    }
+    .nav-logo {
+      font-family: var(--serif); font-size: 22px; font-weight: 600;
+      color: var(--cream); letter-spacing: 0.02em; text-decoration: none;
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+    }
+    .nav-logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 400; color: rgba(247,243,236,0.7);
+      text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta {
+      font-size: 12px; font-weight: 500; color: var(--green-deep);
+      background: var(--gold); padding: 9px 22px; border-radius: 2px;
+      text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase;
+      transition: background 0.2s; flex-shrink: 0;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* Mobile hamburger */
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      padding: 8px; background: none; border: none; z-index: 110;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--cream); border-radius: 2px; transition: all 0.3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav overlay */
+    .nav-mobile-overlay {
+      display: none; position: fixed; inset: 0; z-index: 99;
+      background: rgba(26,58,40,0.98);
+      flex-direction: column; justify-content: center; align-items: center; gap: 40px;
+      padding-top: var(--nav-h);
+    }
+    .nav-mobile-overlay.open { display: flex; }
+    .nav-mobile-overlay a {
+      font-family: var(--serif); font-size: 28px; font-weight: 500;
+      color: var(--cream); text-decoration: none; letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-mobile-overlay a:hover, .nav-mobile-overlay a.cta { color: var(--gold-light); }
+    .nav-mobile-overlay a.cta {
+      font-family: var(--sans); font-size: 14px; font-weight: 500;
+      background: var(--gold); color: var(--green-deep) !important;
+      padding: 14px 36px; border-radius: 2px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* ═══════════ HERO ═══════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--green-deep);
+      position: relative; overflow: hidden;
+      padding: calc(var(--nav-h) + 80px) 60px 64px;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 75% 50%, rgba(45,106,69,0.4) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,147,58,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-pattern {
+      position: absolute; top: 0; right: 0; width: 55%; height: 100%; opacity: 0.04;
+      background-image: repeating-linear-gradient(45deg, var(--cream) 0, var(--cream) 1px, transparent 1px, transparent 40px),
+                        repeating-linear-gradient(-45deg, var(--cream) 0, var(--cream) 1px, transparent 1px, transparent 40px);
+      pointer-events: none;
+    }
+    /* Content lives in the top/middle area — grows to fill space */
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 720px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 48px;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 500; color: var(--gold-light);
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px;
+      animation: fadeUp 0.6s ease 0.1s both;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: var(--serif); font-size: clamp(42px, 5vw, 76px);
+      font-weight: 500; color: var(--cream); line-height: 1.08;
+      margin-bottom: 32px; letter-spacing: -0.01em;
+      animation: fadeUp 0.6s ease 0.25s both;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-body {
+      font-size: 16px; font-weight: 300; color: rgba(247,243,236,0.72);
+      line-height: 1.8; max-width: 520px; margin-bottom: 48px;
+      animation: fadeUp 0.6s ease 0.4s both;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.6s ease 0.55s both; }
+    .btn-gold {
+      display: inline-block; font-size: 12px; font-weight: 500; color: var(--green-deep);
+      background: var(--gold); padding: 14px 36px; border-radius: 2px;
+      text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block; font-size: 12px; font-weight: 500; color: rgba(247,243,236,0.8);
+      background: transparent; padding: 14px 36px; border-radius: 2px;
+      border: 1px solid rgba(247,243,236,0.25); text-decoration: none;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-light); }
+
+    /* Stats sit at the very bottom — separated by a hairline */
+    .hero-stats {
+      position: relative; z-index: 1;
+      display: flex; gap: 0;
+      border-top: 1px solid rgba(247,243,236,0.12);
+      padding-top: 40px;
+      animation: fadeUp 0.6s ease 0.7s both;
+    }
+    .stat {
+      flex: 1;
+      padding: 0 40px 0 0;
+      border-right: 1px solid rgba(247,243,236,0.1);
+    }
+    .stat:last-child { border-right: none; padding-right: 0; padding-left: 40px; }
+    .stat:first-child { padding-left: 0; }
+    .stat-num {
+      font-family: var(--serif); font-size: 38px; font-weight: 600;
+      color: var(--cream); line-height: 1; display: block;
+    }
+    .stat-label {
+      font-size: 11px; font-weight: 400; color: rgba(247,243,236,0.45);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; display: block;
+    }
+
+    /* ═══════════ PRODUCTS ═══════════ */
+    .products { padding: 100px 60px; background: var(--cream); }
+    .section-header { margin-bottom: 60px; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 500; color: var(--green-mid);
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .section-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--green-mid); }
+    .section-header h2 {
+      font-family: var(--serif); font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 500; color: var(--text-dark); line-height: 1.15; max-width: 560px;
+    }
+    .section-header h2 em { font-style: italic; color: var(--green-mid); }
+    .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .product-card {
+      background: var(--white); border: 1px solid var(--cream-dark);
+      border-radius: 4px; overflow: hidden; transition: box-shadow 0.3s, transform 0.2s;
+    }
+    .product-card:hover { box-shadow: 0 8px 32px rgba(26,58,40,0.1); transform: translateY(-2px); }
+    .product-img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--cream-dark); }
+    .product-img-placeholder {
+      width: 100%; height: 220px;
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
+      display: flex; align-items: center; justify-content: center; font-size: 48px;
+    }
+    .product-body { padding: 28px 32px 32px; }
+    .product-num { font-family: var(--serif); font-size: 13px; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 8px; }
+    .product-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--text-dark); margin-bottom: 10px; }
+    .product-card p { font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
+    .product-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-size: 11px; font-weight: 500; color: var(--green-mid); background: rgba(45,106,69,0.08); padding: 4px 10px; border-radius: 2px; letter-spacing: 0.04em; }
+    .tag-red { color: #8b2020; background: rgba(180,40,40,0.08); }
+
+    /* ═══════════ WHY US ═══════════ */
+    .why {
+      padding: 100px 60px; background: var(--green-deep);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .why-text .section-tag { color: var(--gold-light); }
+    .why-text .section-tag::before { background: var(--gold); }
+    .why-text h2 {
+      font-family: var(--serif); font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 500; color: var(--cream); line-height: 1.15; margin-bottom: 20px;
+    }
+    .why-text h2 em { font-style: italic; color: var(--gold-light); }
+    .why-text > p { font-size: 15px; font-weight: 300; color: rgba(247,243,236,0.65); line-height: 1.8; margin-bottom: 40px; }
+    .pillars { display: flex; flex-direction: column; gap: 0; }
+    .pillar { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid rgba(247,243,236,0.1); }
+    .pillar:first-child { border-top: 1px solid rgba(247,243,236,0.1); }
+    .pillar-num { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--gold); min-width: 32px; padding-top: 2px; }
+    .pillar h4 { font-size: 15px; font-weight: 500; color: var(--cream); margin-bottom: 4px; }
+    .pillar p { font-size: 13px; font-weight: 300; color: rgba(247,243,236,0.55); line-height: 1.65; }
+    .why-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .why-box {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(247,243,236,0.1);
+      padding: 32px 28px; border-radius: 2px;
+    }
+    .why-box:first-child { grid-column: span 2; background: rgba(200,147,58,0.1); border-color: rgba(200,147,58,0.3); }
+    .why-box h5 { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--cream); margin-bottom: 6px; }
+    .why-box p { font-size: 13px; font-weight: 300; color: rgba(247,243,236,0.55); line-height: 1.6; }
+
+    /* ═══════════ PROCESS ═══════════ */
+    .process { padding: 100px 60px; background: var(--cream-dark); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; margin-top: 60px; position: relative;
+    }
+    .process-steps::before {
+      content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(to right, transparent, var(--green-mid), transparent);
+    }
+    .step { padding: 0 24px; text-align: center; }
+    .step-circle {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--green-deep);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; position: relative; z-index: 1;
+    }
+    .step-circle span { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--gold-light); }
+    .step h4 { font-size: 15px; font-weight: 500; color: var(--text-dark); margin-bottom: 8px; }
+    .step p { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.65; }
+
+    /* ═══════════ CONTACT ═══════════ */
+    .contact {
+      padding: 100px 60px; background: var(--cream);
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;
+    }
+    .contact-left .section-tag { color: var(--green-mid); }
+    .contact-left .section-tag::before { background: var(--green-mid); }
+    .contact-left h2 {
+      font-family: var(--serif); font-size: clamp(26px, 3vw, 42px);
+      font-weight: 500; color: var(--text-dark); line-height: 1.15; margin-bottom: 16px;
+    }
+    .contact-left h2 em { font-style: italic; color: var(--green-mid); }
+    .contact-left > p { font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.8; margin-bottom: 40px; }
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+    .contact-detail { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-detail-icon {
+      width: 36px; height: 36px; flex-shrink: 0; background: var(--green-deep);
+      border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 16px;
+    }
+    .contact-detail-info label { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+    .contact-detail-info span { font-size: 14px; color: var(--text-dark); font-weight: 400; }
+    .contact-form-wrap { background: var(--white); border: 1px solid var(--cream-dark); padding: 48px 44px; }
+    .contact-form-wrap h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--text-dark); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 7px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; font-family: var(--sans); font-size: 14px; font-weight: 300;
+      color: var(--text-dark); background: var(--cream); border: 1px solid var(--cream-dark);
+      padding: 11px 14px; border-radius: 2px; outline: none; transition: border-color 0.2s; appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green-mid); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%; font-family: var(--sans); font-size: 12px; font-weight: 500;
+      color: var(--white); background: var(--green-deep); border: none; cursor: pointer;
+      padding: 15px 32px; border-radius: 2px; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background 0.2s; margin-top: 4px;
+    }
+    .form-submit:hover { background: var(--green-mid); }
+    .form-submit:disabled { opacity: 0.65; cursor: not-allowed; }
+
+    /* ═══════════ FOOTER ═══════════ */
+    footer {
+      background: #111c13; padding: 48px 60px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--cream); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: rgba(247,243,236,0.3); letter-spacing: 0.04em; }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 12px; color: rgba(247,243,236,0.4); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    /* ═══════════ WHATSAPP ═══════════ */
+    .whatsapp-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      display: flex; align-items: center; gap: 10px;
+      background: #25d366; color: #fff; padding: 12px 20px 12px 14px;
+      border-radius: 50px; text-decoration: none;
+      font-family: var(--sans); font-size: 14px; font-weight: 500;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .whatsapp-btn:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+    .whatsapp-btn svg { flex-shrink: 0; }
+
+    /* ═══════════ SUCCESS BOX ═══════════ */
+    #form-success {
+      display: none; background: rgba(45,106,69,0.08);
+      border: 1px solid rgba(45,106,69,0.25); border-radius: 4px;
+      padding: 20px 24px; margin-bottom: 24px;
+    }
+    #form-success p:first-child { font-size: 15px; color: var(--green-mid); font-weight: 500; margin-bottom: 4px; }
+    #form-success p:last-child { font-size: 13px; color: var(--text-muted); font-weight: 300; }
+
+    /* ═══════════ ANIMATIONS ═══════════ */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — TABLET (max 1024px)
+       ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      nav { padding: 0 32px; }
+      .nav-links { gap: 24px; }
+      .hero { padding: calc(var(--nav-h) + 60px) 40px 56px; }
+      .products { padding: 80px 40px; }
+      .why { padding: 80px 40px; gap: 48px; }
+      .process { padding: 80px 40px; }
+      .contact { padding: 80px 40px; gap: 48px; }
+      footer { padding: 40px; }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — MOBILE (max 768px)
+       ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --nav-h: 64px; }
+
+      /* Nav */
+      nav { padding: 0 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+
+      /* Hero */
+      .hero {
+        min-height: 100svh;
+        padding: calc(var(--nav-h) + 40px) 24px 48px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .hero-content { padding-bottom: 32px; justify-content: flex-start; }
+      .hero h1 { font-size: clamp(36px, 9vw, 54px); }
+      .hero-body { font-size: 15px; }
+      .hero-actions { flex-direction: column; }
+      .btn-gold, .btn-ghost { text-align: center; width: 100%; }
+      .hero-stats {
+        flex-direction: row; flex-wrap: wrap; gap: 0;
+        padding-top: 28px;
+      }
+      .hero-stats .stat {
+        flex: 0 0 50%; padding: 16px 0 0 0;
+        border-right: none; border-top: 1px solid rgba(247,243,236,0.12);
+      }
+      .hero-stats .stat:last-child { padding-left: 0; }
+      .stat-num { font-size: 28px; }
+
+      /* Products */
+      .products { padding: 64px 20px; }
+      .products-grid { grid-template-columns: 1fr; }
+      .product-img, .product-img-placeholder { height: 200px; }
+      .product-body { padding: 22px 20px 24px; }
+
+      /* Why */
+      .why { padding: 64px 20px; grid-template-columns: 1fr; gap: 48px; }
+      .why-visual { grid-template-columns: 1fr; }
+      .why-box:first-child { grid-column: span 1; }
+
+      /* Process */
+      .process { padding: 64px 20px; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .process-steps::before { display: none; }
+      .step { padding: 0 8px; }
+
+      /* Contact */
+      .contact { padding: 64px 20px; grid-template-columns: 1fr; gap: 40px; }
+      .contact-form-wrap { padding: 28px 20px; }
+      .form-row { grid-template-columns: 1fr; }
+
+      /* Footer */
+      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer-links { flex-wrap: wrap; gap: 16px; }
+
+      /* WhatsApp */
+      .whatsapp-btn span { display: none; }
+      .whatsapp-btn { padding: 14px; border-radius: 50%; }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE — SMALL MOBILE (max 480px)
+       ═══════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-eyebrow, .hero h1, .hero p, .hero-actions, .hero-stats { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <!-- SVG Logo Icon (inline, matches brand) -->
+    <svg class="nav-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="32" r="31" fill="#2d6a45" stroke="#c8933a" stroke-width="1.5"/>
+      <circle cx="32" cy="25" r="7" fill="#c8933a"/>
+      <line x1="32" y1="13" x2="32" y2="10" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="21" y1="25" x2="18" y2="25" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="43" y1="25" x2="46" y2="25" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="24.1" y1="17.1" x2="22" y2="15" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="39.9" y1="17.1" x2="42" y2="15" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 42 Q22 34 32 38 Q42 34 54 42 L54 50 Q42 44 32 48 Q22 44 10 50 Z" fill="#c8933a" opacity="0.9"/>
+      <line x1="47" y1="42" x2="47" y2="30" stroke="#c8933a" stroke-width="2" stroke-linecap="round"/>
+      <ellipse cx="47" cy="27" rx="4" ry="5" fill="#c8933a"/>
+      <ellipse cx="43" cy="31" rx="3" ry="4" fill="#c8933a"/>
+      <ellipse cx="51" cy="31" rx="3" ry="4" fill="#c8933a"/>
+    </svg>
+    Xtrayde<span>Global</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="#contact" class="nav-cta">Enquire now</a>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-mobile-overlay" id="mobileNav">
+  <a href="#products" onclick="closeMobileNav()">Products</a>
+  <a href="#why" onclick="closeMobileNav()">Why us</a>
+  <a href="#process" onclick="closeMobileNav()">Process</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#contact" class="cta" onclick="closeMobileNav()">Enquire Now</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Nigerian Agricultural Exports</div>
+    <h1>Premium commodities<br>from Nigeria to the<br><em>world</em></h1>
+    <p class="hero-body">Xtrayde Global sources, grades, and exports top-quality cashews, sesame, soybeans, and hibiscus to international buyers — backed by reliable logistics and transparent trade.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-gold">Request a quote</a>
+      <a href="#products" class="btn-ghost">Our products</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Core commodities</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">Global</span>
+      <span class="stat-label">Buyer markets</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Grade-certified</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCTS ═══════════ -->
+<section class="products" id="products">
+  <div class="section-header">
+    <div class="section-tag">What we export</div>
+    <h2>Four commodities,<br><em>exceptional quality</em></h2>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1726771517475-e7acdd34cd8a?q=80&w=800&auto=format&fit=crop" alt="Cashew nuts" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" loading="lazy"/>
+      <div class="product-img-placeholder" style="display:none;">🥜</div>
+      <div class="product-body">
+        <div class="product-num">01 — Cashew Nuts</div>
+        <h3>Cashew Nuts</h3>
+        <p>Sourced from Nigeria's top-producing belts. Offered as raw cashew nuts (RCN) and processed kernels, graded to international standards for confectionery and snack markets worldwide.</p>
+        <div class="product-tags">
+          <span class="tag">Raw &amp; processed</span>
+          <span class="tag">W180 – W450</span>
+          <span class="tag">ISO graded</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1628317321557-68729bee6644?q=80&w=800&auto=format&fit=crop" alt="Sesame seeds" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" loading="lazy"/>
+      <div class="product-img-placeholder" style="display:none;">🌾</div>
+      <div class="product-body">
+        <div class="product-num">02 — Sesame Seeds</div>
+        <h3>Sesame Seeds</h3>
+        <p>Natural and hulled sesame with consistent oil content and low moisture. Compliant with EU and Asian import standards, ideal for oil extraction, baking, and pharmaceutical uses.</p>
+        <div class="product-tags">
+          <span class="tag">Natural &amp; hulled</span>
+          <span class="tag">High oil content</span>
+          <span class="tag">EU compliant</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+  <img src="https://images.unsplash.com/photo-1663340246051-23e504a32320?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=800&auto=format&fit=crop"
+       alt="Premium charcoal"
+       class="product-img"
+       onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+       loading="lazy"/>
+  <div class="product-img-placeholder" style="display:none;">🔥</div>
+
+  <div class="product-body">
+    <div class="product-num">02 — Charcoal</div>
+    <h3>Premium Charcoal</h3>
+    <p>High-quality Nigerian charcoal with consistent burn performance, low moisture, and excellent heat output. Suitable for household, restaurant, shisha, and industrial applications.</p>
+
+    <div class="product-tags">
+      <span class="tag">High heat output</span>
+      <span class="tag">Low moisture</span>
+      <span class="tag">Export quality</span>
+    </div>
+  </div>
+</div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1639843606783-b2f9c50a7468?q=80&w=800&auto=format&fit=crop" alt="Soybeans" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" loading="lazy"/>
+      <div class="product-img-placeholder" style="display:none;">🌿</div>
+      <div class="product-body">
+        <div class="product-num">03 — Soybeans</div>
+        <h3>Soybeans</h3>
+        <p>Non-GMO Nigerian soybeans with high protein content. Suitable for animal feed manufacturers, edible oil processors, and food industries globally.</p>
+        <div class="product-tags">
+          <span class="tag">Non-GMO</span>
+          <span class="tag">High protein</span>
+          <span class="tag">Feed &amp; food grade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1585044540031-080208462dec?q=80&w=800&auto=format&fit=crop" alt="Dried hibiscus flowers" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" loading="lazy"/>
+      <div class="product-img-placeholder" style="display:none;">🌺</div>
+      <div class="product-body">
+        <div class="product-num">04 — Hibiscus (Zobo)</div>
+        <h3>Dried Hibiscus Flowers</h3>
+        <p>Premium dried Hibiscus sabdariffa (Roselle) sourced from Jigawa, Kano, and Katsina. Vibrant deep-red calyxes with rich flavour, used in herbal teas, beverages, food colouring, and nutraceuticals worldwide.</p>
+        <div class="product-tags">
+          <span class="tag tag-red">Dark &amp; bright red grades</span>
+          <span class="tag tag-red">Moisture ≤10%</span>
+          <span class="tag tag-red">Tea &amp; beverage grade</span>
+          <span class="tag tag-red">Phytosanitary certified</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ WHY US ═══════════ -->
+<section class="why" id="why">
+  <div class="why-text">
+    <div class="section-tag">Why Xtrayde Global</div>
+    <h2>Built on trust,<br><em>driven by quality</em></h2>
+    <p>We exist to make Nigerian agricultural exports reliable and accessible to global buyers. Every shipment reflects our commitment to the highest standards.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div>
+          <h4>Strict quality &amp; grading standards</h4>
+          <p>Every lot is inspected, cleaned, and graded before loading. We work with certified testing labs to meet your destination-market requirements.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div>
+          <h4>Direct farmer &amp; supplier network</h4>
+          <p>Years of relationships with trusted farmers and cooperatives across Nigeria give us consistent access to premium-quality produce at competitive prices.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div>
+          <h4>Reliable delivery &amp; documentation</h4>
+          <p>We handle all export documentation, phytosanitary certificates, and customs clearance — so goods arrive on time with zero compliance surprises.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div>
+          <h4>Competitive, transparent pricing</h4>
+          <p>No hidden fees. We offer market-referenced pricing with clear breakdowns, so you can plan procurement with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="why-visual">
+    <div class="why-box">
+      <h5>Global buyers, Nigerian roots</h5>
+      <p>We serve importers, processors, and distributors across Europe, Asia, the Middle East, and beyond — all supplied from the heart of Nigeria's agricultural regions.</p>
+    </div>
+    <div class="why-box">
+      <h5>Long-term partnerships</h5>
+      <p>We build lasting relationships, not one-off transactions. Repeat buyers get priority allocation and dedicated account support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESS ═══════════ -->
+<section class="process" id="process">
+  <div class="section-header">
+    <div class="section-tag">How it works</div>
+    <h2>From enquiry to<br><em>delivery — simplified</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-circle"><span>1</span></div>
+      <h4>Send an enquiry</h4>
+      <p>Tell us the commodity, quantity, and destination. We respond within 24 hours with availability and pricing.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle"><span>2</span></div>
+      <h4>Receive a quote</h4>
+      <p>We provide a detailed offer including product specs, price, payment terms, and estimated shipping timeline.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle"><span>3</span></div>
+      <h4>Quality inspection</h4>
+      <p>Goods are sourced, cleaned, graded, and inspected. Third-party inspection available on request.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle"><span>4</span></div>
+      <h4>Shipment &amp; delivery</h4>
+      <p>Full export documentation provided. Goods shipped by sea freight with tracking and timely arrival.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <div class="section-tag">Get in touch</div>
+    <h2>Ready to source from<br><em>Nigeria?</em></h2>
+    <p>Whether you're an established importer or exploring Nigerian commodities for the first time, we're here to help. Reach out with your requirements and we'll respond promptly.</p>
+    <div class="contact-details">
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div class="contact-detail-info">
+          <label>Location</label>
+          <span>Abuja, Federal Capital Territory, Nigeria</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div class="contact-detail-info">
+          <label>Email</label>
+          <span>info@xtraydeglobal.com</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-info">
+          <label>Phone / WhatsApp</label>
+          <span>+234 902 5707 122</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form-wrap">
+    <h3>Send us an enquiry</h3>
+    <div id="form-success">
+      <p>✓ Your email client has been opened!</p>
+      <p>Your enquiry is pre-filled and ready to send. Just hit <strong>Send</strong> in your email app. We'll get back to you within 24 hours.</p>
+    </div>
+    <form id="enquiry-form" onsubmit="handleSubmit(event)" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First name *</label>
+          <input id="first-name" type="text" name="first-name" placeholder="John" />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last name *</label>
+          <input id="last-name" type="text" name="last-name" placeholder="Smith" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address *</label>
+        <input id="email" type="email" name="email" placeholder="john@company.com" />
+      </div>
+      <div class="form-group">
+        <label for="company">Company / Organisation</label>
+        <input id="company" type="text" name="company" placeholder="Your company name" />
+      </div>
+      <div class="form-group">
+        <label for="product">Product of interest *</label>
+        <select id="product" name="product">
+          <option value="">Select a product…</option>
+          <option>Cashew Nuts (RCN)</option>
+          <option>Cashew Kernels (processed)</option>
+          <option>Sesame Seeds (natural)</option>
+          <option>Sesame Seeds (hulled)</option>
+          <option>Premium Charcoal</option>
+          <option>Soybeans</option>
+          <option>Dried Hibiscus Flowers</option>
+          <option>Multiple products</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Your message *</label>
+        <textarea id="message" name="message" placeholder="Please share your quantity requirements, destination country, and any other details…"></textarea>
+      </div>
+      <div id="form-error" style="display:none; color:#8b2020; font-size:13px; margin-bottom:12px; padding:10px 14px; background:rgba(180,40,40,0.07); border-radius:2px; border:1px solid rgba(180,40,40,0.2);"></div>
+      <button class="form-submit" type="submit" id="submit-btn">Submit enquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════════ WHATSAPP ═══════════ -->
+<a href="https://wa.me/2349025707122?text=Hello%20Xtrayde Global%2C%20I%27m%20interested%20in%20your%20agricultural%20exports." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.979-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.073-1.117l-.29-.174-3.007.857.85-2.94-.19-.302A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.884c-.242-.121-1.43-.705-1.652-.786-.222-.08-.383-.12-.545.121-.16.242-.624.786-.765.947-.14.162-.282.182-.524.06-.242-.12-1.02-.376-1.944-1.199-.718-.64-1.203-1.431-1.344-1.673-.14-.242-.015-.373.106-.493.108-.109.242-.282.363-.424.12-.14.16-.242.242-.403.08-.162.04-.303-.02-.424-.06-.12-.545-1.313-.747-1.797-.196-.472-.396-.408-.545-.416l-.464-.008c-.161 0-.423.06-.645.303-.222.242-.847.828-.847 2.02 0 1.192.867 2.343.988 2.504.12.162 1.706 2.605 4.134 3.652.578.25 1.028.399 1.38.51.58.184 1.108.158 1.525.096.465-.069 1.43-.585 1.633-1.15.2-.564.2-1.048.14-1.15-.06-.1-.222-.161-.464-.282z"/>
+  </svg>
+  <span>Chat with us</span>
+</a>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-logo">Xtrayde<span>Global</span></div>
+  <div class="footer-links">
+    <a href="#products">Products</a>
+    <a href="#why">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Xtrayde Global. All rights reserved.</div>
+</footer>
+
+<script>
+  // ── Mobile nav toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Close on outside click
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target === mobileNav) closeMobileNav();
+  });
+
+  // ── Form submit — works everywhere via mailto
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const btn       = document.getElementById('submit-btn');
+    const errorBox  = document.getElementById('form-error');
+    const form      = document.getElementById('enquiry-form');
+    const success   = document.getElementById('form-success');
+
+    // Clear previous errors
+    errorBox.style.display = 'none';
+    errorBox.textContent   = '';
+
+    // Gather values
+    const firstName = document.getElementById('first-name').value.trim();
+    const lastName  = document.getElementById('last-name').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const company   = document.getElementById('company').value.trim();
+    const product   = document.getElementById('product').value;
+    const message   = document.getElementById('message').value.trim();
+
+    // Client-side validation
+    const missing = [];
+    if (!firstName) missing.push('First name');
+    if (!lastName)  missing.push('Last name');
+    if (!email)     missing.push('Email address');
+    if (!product)   missing.push('Product of interest');
+    if (!message)   missing.push('Message');
+
+    if (missing.length) {
+      errorBox.textContent = 'Please fill in: ' + missing.join(', ') + '.';
+      errorBox.style.display = 'block';
+      return;
+    }
+
+    // Basic email format check
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorBox.textContent = 'Please enter a valid email address.';
+      errorBox.style.display = 'block';
+      return;
+    }
+
+    // Build mailto
+    const to      = 'info@xtraydeglobal.com';
+    const subject = encodeURIComponent('Xtrayde Global Enquiry — ' + product + ' — ' + firstName + ' ' + lastName);
+    const body    = encodeURIComponent(
+      'Name: ' + firstName + ' ' + lastName + '\n' +
+      'Email: ' + email + '\n' +
+      (company ? 'Company: ' + company + '\n' : '') +
+      'Product: ' + product + '\n\n' +
+      'Message:\n' + message
+    );
+
+    btn.disabled    = true;
+    btn.textContent = 'Opening email…';
+
+    // Open mail client
+    window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+
+    // Show success after a short delay (mail client opens async)
+    setTimeout(() => {
+      form.style.display    = 'none';
+      success.style.display = 'block';
+    }, 1200);
+  }
+</script>
+</body>
+</html>
